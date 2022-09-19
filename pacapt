@@ -1,0 +1,8 @@
+#! /bin/bash
+
+# WARNING: Don't do this on Arch-based system!
+
+[ "`id -u`" != "0" ] && echo "Only root can run $0" && exit 1
+curl -Lo /usr/bin/pacman https://github.com/icy/pacapt/raw/ng/pacapt
+chmod 755 /usr/bin/pacman
+
